@@ -6,14 +6,11 @@ class PrototypesController < ApplicationController
     @prototypes = Prototype.all
     if user_signed_in?
       @current_user = User.find(current_user.id)
-    else
-      
     end
   end
 
   def new
     @prototype = Prototype.new
-
   end
 
   def create
